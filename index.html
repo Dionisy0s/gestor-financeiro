@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Gestor Financeiro</title>
+
+<link rel="stylesheet" href="styles.css">
+<link rel="manifest" href="manifest.json">
+
+<script src="charts/chart.min.js"></script>
+
+</head>
+
+<body>
+
+<header>
+
+<h1>Gestor Financeiro</h1>
+
+<select id="userSelector">
+<option value="user1">Usuário 1</option>
+<option value="user2">Usuário 2</option>
+</select>
+
+<button id="jointMode">Modo Conjunto</button>
+
+</header>
+
+<main>
+
+<section id="dashboard">
+
+<h2>Resumo Financeiro</h2>
+
+<div id="summary"></div>
+
+<canvas id="balanceChart"></canvas>
+
+</section>
+
+<section id="transactions">
+
+<h2>Transações</h2>
+
+<input id="desc" placeholder="Descrição">
+<input id="value" type="number">
+
+<select id="type">
+<option value="income">Receita</option>
+<option value="expense">Despesa</option>
+</select>
+
+<select id="category"></select>
+
+<button id="addTransaction">Adicionar</button>
+
+<table id="transactionTable"></table>
+
+</section>
+
+<section id="budgets">
+
+<h2>Orçamentos</h2>
+<div id="budgetList"></div>
+
+</section>
+
+<section id="goals">
+
+<h2>Metas</h2>
+<div id="goalList"></div>
+
+</section>
+
+<section id="reports">
+
+<h2>Relatórios</h2>
+
+<button id="reportMonth">Relatório Mensal</button>
+<button id="reportYear">Relatório Anual</button>
+
+<div id="reportOutput"></div>
+
+</section>
+
+<section>
+
+<h2>Previsão Financeira</h2>
+<canvas id="forecastChart"></canvas>
+
+</section>
+
+<section>
+
+<h2>Exportar</h2>
+
+<button id="exportCSV">Exportar CSV</button>
+<button id="exportJSON">Exportar JSON</button>
+
+</section>
+
+</main>
+
+<script src="db.js"></script>
+<script src="analytics.js"></script>
+<script src="forecast.js"></script>
+<script src="app.js"></script>
+
+</body>
+
+</html>
